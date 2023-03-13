@@ -19,6 +19,12 @@ class TransaksiController extends Controller
     //Menampilkan table!
     public function index()
     {
+<<<<<<< HEAD
+=======
+        // $users = User::all();
+        // $pakets = Paket::all();
+        // $outlets = Outlet::all();
+>>>>>>> 3cc5823 (Commit laundrysinar)
         $transaksis = Transaksi::all();
         return view('admin.transaksi.list', compact('transaksis'));
     }
@@ -32,6 +38,10 @@ class TransaksiController extends Controller
             'id_outlet' => $request->id_outlet,
             'kode_invoice' => $request->kode_invoice,
             'id_member' => $request->id_member,
+<<<<<<< HEAD
+=======
+            'id_paket' => $request->id_paket,
+>>>>>>> 3cc5823 (Commit laundrysinar)
             'tgl' => $request->tgl,
             'diskon' => $request->diskon,
             'pajak' => $request->pajak,

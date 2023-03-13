@@ -50,7 +50,11 @@ class AuthController extends Controller
     {
        $request->session()->flush();
        Auth::logout();
+<<<<<<< HEAD
        return Redirect('login');
+=======
+       return Redirect('auth/login');
+>>>>>>> 3cc5823 (Commit laundrysinar)
     }
 
 }

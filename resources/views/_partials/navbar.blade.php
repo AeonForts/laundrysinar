@@ -12,7 +12,11 @@
                         <a class="dropdown-item" href="#!">Action</a>
                         <a class="dropdown-item" href="#!">Another action</a>
                         <div class="dropdown-divider"></div>
+<<<<<<< HEAD
                         <a class="dropdown-item" href="#!">Something else here</a>
+=======
+                        <a class="dropdown-item" href="{{route ('logout')}}">Logout</a>
+>>>>>>> 3cc5823 (Commit laundrysinar)
                     </div>
                 </li>
             </ul>

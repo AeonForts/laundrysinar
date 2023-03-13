@@ -3,7 +3,11 @@
 
     <!-- <a href="/outlet/create"  class="btn btn-success"> + Add New Data</a> -->
     <div class="bg-light mr-md-3 pt-3 pb-3 px-3 pt-md-5 px-md-5 overflow-hidden shadow rouded">
+<<<<<<< HEAD
     <a href="#" onclick="ModalTambahMember()"  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ModalTambahMember"> + Add New Data</a>
+=======
+    <a href="#" onclick="ModalTambahTransaksi()"  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ModalTambahTransaksi"> + Add New Data</a>
+>>>>>>> 3cc5823 (Commit laundrysinar)
 <table class="table table-striped">
     <thead class="thead-dark">
     <tr>

@@ -63,5 +63,9 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+<<<<<<< HEAD
+=======
+        'check_role' => \App\Http\Middleware\CheckRole::class,
+>>>>>>> 3cc5823 (Commit laundrysinar)
     ];
 }

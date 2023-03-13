@@ -26,6 +26,10 @@ class CheckRole
             return $next($request);
 
 
+<<<<<<< HEAD
         return redirect('login')->with('error',"kamu gak punya akses");
+=======
+        return redirect('auth/login')->with('error',"kamu gak punya akses");
+>>>>>>> 3cc5823 (Commit laundrysinar)
     }
 }

@@ -21,8 +21,13 @@
 
                 <td>{{$index +1}}</td>
                 <td>{{$Get->outlet->nama}}</td>
+<<<<<<< HEAD
                 <td>{{$Get->nama_paket}}</td>
                 <td>{{$Get->jenis}}</td>
+=======
+                <td>{{$Get->jenis}}</td>
+                <td>{{$Get->nama_paket}}</td>
+>>>>>>> 3cc5823 (Commit laundrysinar)
                 <td>{{$Get->harga}}</td>
                 <td>
                     <a href="#" onclick="ModalEditPaket('{{$Get->id_paket}}','{{$Get->id_outlet}}','{{$Get->jenis}}','{{$Get->nama_paket}}','{{$Get->harga}}')"  data-bs-toggle="modal" data-bs-target="#ModalEditPaket" class="btn btn-info" >Update</a>
