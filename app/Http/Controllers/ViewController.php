@@ -13,13 +13,16 @@ class ViewController extends Controller
         // dd(Auth::user());
         return view('admin.dashboard');
     }
-<<<<<<< HEAD
-=======
 
     public function kasir()
     {
         // dd(Auth::user());
         return view('admin.dashboard');
     }
->>>>>>> 3cc5823 (Commit laundrysinar)
+
+    public function member()
+    {
+        // dd(Auth::user());
+        return view('member');
+    }
 }

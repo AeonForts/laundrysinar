@@ -37,7 +37,7 @@ class OutletController extends Controller
             'tlp' => $request->tlp,
             ]);
 
-            return redirect('admin/outlet/list');
+            return redirect('admin/outlet');
     }
     //-------------------End of Tambah Data---------------------------
 
@@ -60,7 +60,7 @@ class OutletController extends Controller
 
 		]);
 		// alihkan halaman ke halaman berita
-		return redirect('admin/outlet/list');
+		return redirect('admin/outlet');
 
     }
 

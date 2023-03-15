@@ -11,12 +11,12 @@
                 <div class="card-body">
 
                     @foreach ($details as $detail)
-                    <form action="/admin/transaksi/detail/{{$detail->id_transaksi}}" method="POST">
+                    <form action="/admin/transaksi/detail/{{$detail->id_detail_transaksi}}" method="POST">
 
                         @csrf
 
                         @foreach ($transaksis as $Get)
-                        <fieldset disabled>
+
                         <div class="form-group">
                             <label class="font-weight-bold">Kode invoice</label>
                             <input type="text" class="form-control" id='kode_invoice' name="kode_invoice" value="{{ $Get->kode_invoice }}" placeholder="">
@@ -88,7 +88,7 @@
                             <label class="font-weight-bold">Pembayaran</label>
                             <input type="text" class="form-control" id='dibayar' name="dibayar" value="{{ $Get->dibayar }}" placeholder="">
                         </div>
-                        </fieldset>
+
                         {{-- @endforeach --}}
                         {{-- <div class="form-group">
                             <label class="font-weight-bold">Alamat</label>
@@ -104,9 +104,6 @@
 
 
                     </form>
-                    <div>
-                    <a class="btn btn-primary" href="#" role="button">Link</a>
-                    <a class="btn btn-primary mx-5" href="#" role="button">Link</a>
 
                     @endforeach
                 </div>

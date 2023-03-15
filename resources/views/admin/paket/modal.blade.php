@@ -11,11 +11,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-<<<<<<< HEAD
-                    <fieldset disabled>
-=======
    
->>>>>>> 3cc5823 (Commit laundrysinar)
                     <div class="mb-3">
                         <label class="form-label">Outlet</label>
                         <select class="form-control" name="id_outlet" id='id_outlet' required>
@@ -55,11 +51,6 @@
                         <label class="form-label">Harga</label>
                         <input type="number" name="harga" class="form-control" required>
                     </div>
-<<<<<<< HEAD
-                </fieldset>
-=======
-
->>>>>>> 3cc5823 (Commit laundrysinar)
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                         <input type="submit" class="btn btn-primary" name="simpan" value="Simpan">
