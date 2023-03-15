@@ -17,18 +17,23 @@ class Transaksi extends Model
         'id_outlet',
         'kode_invoice',
         'id_member',
+        'id_paket',
+        'quantity',
+        'keterangan',
         'tgl',
         'batas_waktu',
         'tgl_bayar',
         'biaya_tambahan',
         'diskon',
         'pajak',
+        'total',
         'status',
         'dibayar',
         'id_user',
-
+        
     ];
 
+    public $timestamps=false;
 
     public function Outlet(): BelongsTo
     {

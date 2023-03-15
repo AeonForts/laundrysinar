@@ -2,7 +2,7 @@
 @section('content')
 <h1 class="mt-4">Data Paket</h1>
     <!-- <a href="/outlet/create"  class="btn btn-success"> + Add New Data</a> -->
-    <div class="bg-light mr-md-3 pt-3 pb-3 px-3 pt-md-5 px-md-5 overflow-hidden shadow rouded">
+    <div class="bg-white mr-md-3 pt-3 pb-3 px-3 pt-md-5 px-md-5 overflow-hidden shadow rouded">
     <a href="#" onclick="ModalTambahPaket()"  class="btn btn-success"> + Add New Data</a>
     <div class="table-responsive">
             <table class="table table-bordered table-hover">
@@ -21,13 +21,8 @@
 
                 <td>{{$index +1}}</td>
                 <td>{{$Get->outlet->nama}}</td>
-<<<<<<< HEAD
                 <td>{{$Get->nama_paket}}</td>
                 <td>{{$Get->jenis}}</td>
-=======
-                <td>{{$Get->jenis}}</td>
-                <td>{{$Get->nama_paket}}</td>
->>>>>>> 3cc5823 (Commit laundrysinar)
                 <td>{{$Get->harga}}</td>
                 <td>
                     <a href="#" onclick="ModalEditPaket('{{$Get->id_paket}}','{{$Get->id_outlet}}','{{$Get->jenis}}','{{$Get->nama_paket}}','{{$Get->harga}}')"  data-bs-toggle="modal" data-bs-target="#ModalEditPaket" class="btn btn-info" >Update</a>

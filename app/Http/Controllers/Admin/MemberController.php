@@ -29,6 +29,8 @@ class MemberController extends Controller
         $members =Member::create([
             'id_member' => $request->id_member,
             'nama' => $request->nama,
+            'username' => $request->username,
+            'password' => $request->password,
             'alamat' => $request->alamat,
             'jenis_kelamin' => $request->jenis_kelamin,
             'tlp' => $request->tlp,

@@ -30,30 +30,17 @@ Route::get('/', function () {
 // Route::get('admin', [ViewController::class,'admin']);
 Route::get('auth/login',[AuthController::class,'login_view'])->name('login');
 Route::post('auth/login_action',[AuthController::class,'login_action'])->name('login_action');
-<<<<<<< HEAD
-
-Route::group(['middleware' => ['auth', 'check_role:admin']], function () {
-        Route::get('admin', [ViewController::class,'admin'])->name('Vadmin');
-=======
 Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
-Route::group(['middleware' => ['auth', 'check_role:admin' ]], function () {
+// Route::group(['middleware' => ['auth', 'check_role:admin' ]], function () {
         Route::get('admin', [ViewController::class,'admin'])->name('Vadmin');
 
->>>>>>> 3cc5823 (Commit laundrysinar)
         Route::get('admin/outlet', [OutletController::class,'index']);
         Route::get('admin/outlet/create', [OutletController::class,'create']);
         Route::post('/admin/outlet/store',[OutletController::class,'store'])->name('store_outlet');
         Route::get('admin/outlet/edit/{id}',[OutletController::class,'edit']);
         Route::post('admin/outlet/update',[OutletController::class,'update'])->name('update_outlet');
         Route::post('/admin/outlet/delete',[OutletController::class,'delete'])->name('delete_outlet');
-<<<<<<< HEAD
-});
-
-
-Route::get('/pesan', [DashboardController::class,'create'])->name('pesan');
-Route::get('/about', [DashboardController::class,'about']);
-=======
         
         Route::get('admin/user', [UserController::class,'index']);
         Route::post('admin/user/store', [UserController::class,'store'])->name('store_user');
@@ -61,26 +48,22 @@ Route::get('/about', [DashboardController::class,'about']);
     
     Route::get('/pesan', [DashboardController::class,'create'])->name('pesan');
     Route::get('/about', [DashboardController::class,'about']);
-});
+// });
 
 Route::group(['middleware' => ['auth', 'check_role:kasir' ]], function () {
 Route::get('kasir', [ViewController::class,'kasir'])->name('Vkasir');
 
 });
 
-
->>>>>>> 3cc5823 (Commit laundrysinar)
-
+Route::get('member', [ViewController::class,'member'])->name('Vmember');
 
 
 
-<<<<<<< HEAD
+
 Route::get('admin/user', [UserController::class,'index']);
 Route::post('admin/user/store', [UserController::class,'store'])->name('store_user');
 Route::post('admin/user/update',[UserController::class,'update'])->name('update_user');
 
-=======
->>>>>>> 3cc5823 (Commit laundrysinar)
 
 
 Route::get('admin/paket', [PaketController::class,'index']);
@@ -93,12 +76,11 @@ Route::get('admin/member', [MemberController::class,'index']);
 Route::post('/admin/member/store',[MemberController::class,'store'])->name('store_member');
 Route::post('admin/member/update',[MemberController::class,'update'])->name('update_member');
 Route::post('/admin/member/delete',[MemberController::class,'delete'])->name('delete_member');
-<<<<<<< HEAD
 
-=======
->>>>>>> 3cc5823 (Commit laundrysinar)
+
 Route::get('admin/transaksi', [TransaksiController::class,'index']);
-
+Route::post('admin/transaksi/store', [TransaksiController::class,'store'])->name('store_transaksi');
+Route::post('admin/transaksi/delete', [TransaksiController::class,'delete'])->name('delete_detail_transaksi');
 
 
 
@@ -112,7 +94,3 @@ Route::get('admin/transaksi/detail/{id}', [DetailTransaksiController::class,'ind
 
 Route::get('admin/laporan', [LaporanController::class,'index']);
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3cc5823 (Commit laundrysinar)

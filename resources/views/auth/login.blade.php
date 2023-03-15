@@ -1,7 +1,7 @@
 @include('_partials.head')
 
 
-<div id="layoutAuthentication">
+ <!-- <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
         <main>
             <div class="container">
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </main>
-    </div>
+    </div> -->
 
 </div>
 <script
@@ -94,7 +94,7 @@
 <script src="{{url('assets/js/scripts.js')}}"></script>
 
 
-{{-- <section class="vh-100">
+ <section class="vh-100">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-6 text-black">
@@ -116,7 +116,7 @@
 
           <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-            <form action='{{route ('login_action')}}'style="width: 23rem;">
+            <form action='{{route ('login_action') }}' method="post"style="width: 23rem;">
                 @csrf
               <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
@@ -148,4 +148,4 @@
         </div>
       </div>
     </div>
-  </section> --}}
+  </section> 

@@ -23,17 +23,12 @@ class DetailTransaksiController extends Controller
     //Menampilkan table!
     public function index($id)
     {
-        $details = DetailTransaksi::all();
+        $details = DetailTransaksi::where('id_transaksi',$id)->get();
         $transaksis = Transaksi::where('id_transaksi',$id)->get();
 
         return view('admin.transaksi.detail', compact('details' ,'transaksis'));
     }
 
-<<<<<<< HEAD
-=======
-
-    
->>>>>>> 3cc5823 (Commit laundrysinar)
     //-------------------Tambah Data di table!--------------------------
 
     // public function store(Request $request){
@@ -48,23 +43,9 @@ class DetailTransaksiController extends Controller
     //         return redirect('admin/detail/list');
     // }
     // //-------------------End of Tambah Data---------------------------
-<<<<<<< HEAD
 
     // //-------------------Update Data di table!-----------------------
 
-=======
-        
-    // //-------------------Update Data di table!-----------------------
-
-    public function edit($id)
-    {
-        $details = DetailTransaksi::all();
-        $transaksis = Transaksi::where('id_transaksi',$id)->get();
-
-        return view('admin.transaksi.detail',compact('details' ,'transaksis'));
-    }
-
->>>>>>> 3cc5823 (Commit laundrysinar)
     // public function update(Request $request)
     // {
     // 	DB::table('tb_detail_transaksi')->where('id_detail_transaksi',$request->id_detail_transaksi)->update([
@@ -95,5 +76,7 @@ class DetailTransaksiController extends Controller
 	// 	return redirect('admin/member/list');
 
     // }
+
+    
 
 }

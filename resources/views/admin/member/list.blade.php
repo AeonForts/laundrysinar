@@ -20,6 +20,7 @@
         <tr>
             <td>{{$index +1}}</td>
             <td>{{$Get->nama}}</td>
+            <td>{{$Get->username}}</td>
             <td>{{$Get->alamat}}</td>
             <td>{{$Get->jenis_kelamin}}</td>
             <td>{{$Get->tlp}}</td>

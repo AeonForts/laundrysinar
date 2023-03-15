@@ -28,7 +28,7 @@ class AuthController extends Controller
 
         $credentials = $request->only('username','password');
 
-            if (Auth::attempt($credentials)) {
+            if (Auth::guard('web')->attempt($credentials)) {
                 $user = Auth::user();
                 // dd(Auth::user());
                 if ($user->role == 'admin') {
@@ -36,9 +36,12 @@ class AuthController extends Controller
                 } elseif ($user->role == 'kasir') {
                     return redirect()->intended('kasir');
                 } elseif ($user->role == 'owner') {
-                    return redirect()->intended('owner');
+                    return redirect()->intended('admin');
                 }
                 return redirect()->intended('/');
+            } elseif (Auth::guard('member')->attempt($credentials)){
+                // $member = Auth::member();
+                return redirect('member');
             }
 
         return redirect('auth/login')
@@ -50,11 +53,7 @@ class AuthController extends Controller
     {
        $request->session()->flush();
        Auth::logout();
-<<<<<<< HEAD
-       return Redirect('login');
-=======
        return Redirect('auth/login');
->>>>>>> 3cc5823 (Commit laundrysinar)
     }
 
 }

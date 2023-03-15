@@ -1,15 +1,9 @@
 <!-- Form Modal Hapus Member-->
 
 <!-- Form Modal Tambah Member -->
-<<<<<<< HEAD
-<form action="{{ route('store_member') }}" method="post">
-    @csrf
-    <div class="modal fade" id="ModalTambahMember" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-=======
 <form action="{{ route('store_transaksi') }}" method="post">
     @csrf
     <div class="modal fade" id="ModalTambahTransaksi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
->>>>>>> 3cc5823 (Commit laundrysinar)
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -19,26 +13,6 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-<<<<<<< HEAD
-                        <label class="form-label">No Invoice</label>
-                        <input type="text" name="nama" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Alamat</label>
-                        <textarea name="alamat" class="form-control" required></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Jenis kelamin</label>
-                        <select class="form-control" name="jenis_kelamin" id='jenis_kelamin' required>
-                            <option value="">Pilih Jenis Kelamin</option>
-                            <option value="laki_laki">Laki Laki</option>
-                            <option value="perempuan">Perempuan</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Telephon</label>
-                        <input type="number" name="tlp" class="form-control" required>
-=======
                         <label class="form-label">Invoice</label>
                         <input type="text" name="kode_invoice" class="form-control" required>
                     </div>
@@ -79,6 +53,16 @@
                     </div>
 
                     <div class="mb-3">
+                        <label class="form-label">jumlah</label>
+                        <input type="text" name="quantity" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Keterangan</label>
+                        <textarea name="keterangan" class="form-control" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
                         <label class="form-label">Tanggal Laundry Masuk</label>
                         <input type="date" name="tgl" class="form-control" required>
                     </div>
@@ -86,6 +70,11 @@
                     <div class="mb-3">
                         <label class="form-label">Batas Waktu</label>
                         <input type="date" name="batas_waktu" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Bayar</label>
+                        <input type="date" name="tgl_bayar" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
@@ -138,7 +127,6 @@
                                 </option>
                             @endforeach
                         </select>
->>>>>>> 3cc5823 (Commit laundrysinar)
                     </div>
 
                     <div class="modal-footer">
@@ -198,9 +186,9 @@
 </form>
 
 <!-- Form Modal Hapus Member-->
-<form action="{{route('delete_member')}}" method="post">
+<form action="{{route('delete_detail_transaksi')}}" method="post">
     @csrf
-<div class="modal fade" id="ModalHapusMember" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalHapusDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -209,7 +197,7 @@
         </div>
         <div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
           <div class="modal-footer">
-              <input type="hidden" name="id_member">
+              <input type="hidden" name="id_detail_transaksi">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
               <input type="submit" class="btn btn-primary" name="simpan" value="Simpan">
           </div>
@@ -233,15 +221,9 @@
     crossorigin="anonymous"></script>
 <script>
     // Modal Tambah Member
-<<<<<<< HEAD
-    function ModalTambahMember() {
-        console.log(jenis);
-        $('#ModalTambahMember').modal('show');
-=======
     function ModalTambahTransaksi() {
         console.log(jenis);
         $('#ModalTambahTransaksi').modal('show');
->>>>>>> 3cc5823 (Commit laundrysinar)
     }
     // Modal Tambah Member
 
@@ -259,8 +241,8 @@
     // Modal Edit Member
 
     // Modal Hapus Member
-    function ModalHapusMember($id) {
-        $('[name="id_member"]').val($id);
-        $('#ModalHapusMember').modal('show');
+    function ModalHapusDetail($id) {
+        $('[name="id_detail_transaksi"]').val($id);
+        $('#ModalHapusDetail').modal('show');
     }
 </script>

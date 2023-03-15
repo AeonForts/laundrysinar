@@ -29,6 +29,14 @@
                         </select>
                     </div>
                     <div class="mb-3">
+                        <label class="form-label">username</label>
+                        <input type="text" name="username" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">password</label>
+                        <input type="text" name="password" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label">Telephon</label>
                         <input type="number" name="tlp" class="form-control" required>
                     </div>
@@ -65,6 +73,14 @@
                     <div class="mb-3">
                         <label class="form-label">Alamat</label>
                         <textarea name="alamat" class="form-control" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" name="username" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="text" name="password" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jenis kelamin</label>
@@ -128,11 +144,13 @@
     // Modal Tambah Member
 
     // Modal Edit Member
-    function ModalEditMember(id_member,nama,alamat,jenis_kelamin,tlp) {
+    function ModalEditMember(id_member,nama,username,password,alamat,jenis_kelamin,tlp) {
         // console.log(nama_paket);
         // console.log(nama_paket);
         $('[name="id_member"]').val(id_member);
         $('[name="nama"]').val(nama);
+        $('[name="username"]').val(username);
+        $('[name="password"]').val(password);
         $('[name="alamat"]').val(alamat);
         $('[name="jenis_kelamin"]').val(jenis_kelamin);
         $('[name="tlp"]').val(tlp);

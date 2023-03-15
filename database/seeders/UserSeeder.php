@@ -12,13 +12,15 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::create([
+        \App\Models\Member::create([
 
-            'nama' => 'anya',
-            'username' => 'kasir1',
+            'nama' => 'test',
+            'alamat' => 'jl_pening',
+            'username' => 'eila',
             'password' => bcrypt('123'),
-            'id_outlet' => '2',
-            'role' => 'kasir',
+            'jenis_kelamin' => 'laki_laki',
+            'tlp' => '081231241',
+
     ]);
     }
 }

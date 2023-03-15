@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\User;
+use App\Models\Paket;
+use App\Models\Outlet;
 use App\Models\Transaksi;
+use App\Models\Member;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DetailTransaksiController;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
@@ -19,14 +24,12 @@ class TransaksiController extends Controller
     //Menampilkan table!
     public function index()
     {
-<<<<<<< HEAD
-=======
-        // $users = User::all();
-        // $pakets = Paket::all();
-        // $outlets = Outlet::all();
->>>>>>> 3cc5823 (Commit laundrysinar)
+        $users = User::all();
+        $members = member::all();
+        $pakets = Paket::all();
+        $outlets = Outlet::all();
         $transaksis = Transaksi::all();
-        return view('admin.transaksi.list', compact('transaksis'));
+        return view('admin.transaksi.list', compact('transaksis','outlets','pakets','users','members'));
     }
 
     //-------------------Tambah Data di table!--------------------------
@@ -36,15 +39,18 @@ class TransaksiController extends Controller
         $transaksis =Transaksi::create([
             'id_transaksi' => $request->id_transaksi,
             'id_outlet' => $request->id_outlet,
-            'kode_invoice' => $request->kode_invoice,
+            'kode_invoice' => Hash::make($request->kode_invoice),
             'id_member' => $request->id_member,
-<<<<<<< HEAD
-=======
             'id_paket' => $request->id_paket,
->>>>>>> 3cc5823 (Commit laundrysinar)
+            'quantity' => $request->quantity,
+            'keterangan' => $request->keterangan,
             'tgl' => $request->tgl,
+            'batas_waktu' => $request->batas_waktu,
+            'tgl_bayar' => $request->tgl_bayar,
+            'biaya_tambahan' => $request->biaya_tambahan,
             'diskon' => $request->diskon,
             'pajak' => $request->pajak,
+            'total' => $request->total,
             'status' => $request->status,
             'dibayar' => $request->dibayar,
             'id_user' => $request->id_user,
